@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dataset Recommendation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>🔍 Dataset Recommendation System</h1>
+  </header>
+
+  <main class="container">
+    <form method="POST" class="search-form">
+      <input type="text" name="query" placeholder="Enter dataset description..." required>
+      <button type="submit">Recommend</button>
+    </form>
+
+    {% if results %}
+    <section class="results">
+      <h3>Top Recommendations:</h3>
+      <div class="card-scroll">
+        <div class="card-grid">
+          {% for item in results %}
+            <div class="result-item">
+              <h4>{{ item.name }}</h4>
+              <p>
+                👤 <strong>Author:</strong> {{ item.author }}<br>
+                📁 <strong>Files:</strong> {{ item.files }}<br>
+                💾 <strong>Size:</strong> {{ item.size }}<br>
+                📄 <strong>Type:</strong> {{ item.type }}<br>
+                👍 <strong>Upvotes:</strong> {{ item.upvotes }}<br>
+                🏅 <strong>Medals:</strong> {{ item.medals }}<br>
+                ✅ <strong>Usability:</strong> {{ item.usability }}
+              </p>
+              <a href="{{ item.link }}" target="_blank">🔗 View Dataset</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+  </main>
+
+  <footer style="text-align:center; padding: 20px 0; font-size: 14px; color: #777;">
+    &copy; {{ year if year else '2025' }} Dataset Recommender | Made with ❤️ by <strong>Akansha Yadav</strong>
+  </footer>
+</body>
+</html>

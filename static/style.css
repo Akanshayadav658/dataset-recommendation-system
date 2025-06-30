@@ -1,0 +1,123 @@
+/* Base Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #ede7f6);
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c387e;
+  margin: 0;
+}
+
+/* Main Container */
+main {
+  padding: 20px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Search Form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  min-width: 250px;
+  padding: 14px;
+  border: 2px solid #c5cae9;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-form button {
+  padding: 14px 24px;
+  background-color: #00bfa5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #009e88;
+}
+
+/* Results Section */
+.results h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  color: #2c387e;
+}
+
+/* Grid Layout (Vertical Scroll) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 0 10px 20px;
+}
+
+/* Result Card */
+.result-item {
+  background: #ffffff;
+  padding: 20px 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #e0e0e0;
+}
+
+.result-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.result-item h4 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #263238;
+  text-align: center;
+}
+
+.result-item p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #424242;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Dataset Link */
+.result-item a {
+  display: block;
+  text-align: center;
+  background-color: #1e88e5;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
