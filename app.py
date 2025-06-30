@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import joblib
 from sklearn.metrics.pairwise import cosine_similarity
+import os
 
 # Initialize Flask app
 app = Flask(__name__)
